@@ -23,13 +23,26 @@ To use HFuzzer:
 
 3. **Run Baseline Scripts**:
 ```bash
+cd HFuzzer/script
+
 # Run RAG baseline
-python HFuzzer/script/RAG_setup.py
-python HFuzzer/script/RAG_run.py
+python RAG_setup.py
+python RAG_run.py
 
 # Or run vanilla baseline
-python HFuzzer/script/vanilla.py
+python vanilla.py
 ```
+
+## How to use PackMonitor
+
+We further integrate our method into HFuzzer for evaluating package hallucination.
+
+To run PackMonitor on HFuzzer, execute:
+```bash
+python packmonitor.py
+```
+The detailed implementation of PackMonitor can be found in `HFuzzer/Framework/packmonitor_generate.py`
+
 
 ## Package4U Configuration
 
